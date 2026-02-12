@@ -1,0 +1,123 @@
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 52px;
+    z-index: 10;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 52px;
+    z-index: 10;
+}
+
+ul li a{
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul li a:hover{
+    background-color: #111111;
+}
+
+ul li a:active{
+    background-color: #AD27F5;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(circle at 50% 50%,
+        #f3e8ff 0%,
+        #d8b4fe 30%,
+        #c084fc 55%,
+        #9333ea 80%,
+        #3b0764 100%);
+    background-size: 200% 200%;
+    animation: glowMove 8s ease-in-out infinite alternate;
+}
+@keyframes glowMove {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+
+h1{
+     font-family: Arial, Helvetica, sans-serif;
+     text-align: center;
+     color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px red;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.6;
+    color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px red;
+}
+
+.page_content {
+    margin-top: 70px;  
+    padding-bottom: 40px; 
+}
+
+.icon-gallery {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon-gallery img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(192, 132, 252, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+     animation: float 4s ease-in-out infinite;
+}
+
+.icon-gallery img:nth-child(odd) {
+    animation-duration: 5s;
+}
+
+.icon-gallery img:nth-child(even) {
+    animation-duration: 3.5s;
+}
+
+
+.icon-gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 35px rgba(192, 132, 252, 0.9);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
